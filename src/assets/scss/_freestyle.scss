@@ -1,17 +1,21 @@
 .landing_section {
   background: url("assets/images/home-page/main_bg.jpg");
   background-position: center;
-
   position: relative;
-
-  .main_section {
+ 
+  .main_right {
     padding: 25% 0;
   }
+  .main_left {
+    padding: 25% 0;
+  }
+ 
 
   .main_head {
-    line-height: 38px;
-    font-size: 40px;
-    font-family: Antipasto Pro DemiBold;
+    line-height: 46px;
+    font-size: 38px;
+    font-weight: 600;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
   }
 
   .main_caption {
@@ -48,11 +52,46 @@
   .feature_block{
     padding-top: 64px;
     padding-bottom: 64px;
+    position: relative;
   }
   .feature_bg_img{
     background: url("assets/images/home-page/features_bg.jpg");
     padding:  80% 20%;
     background-position: center;
+  }
+  .feature_slider{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+
+    .carousel-inner {
+      position: relative;
+      overflow: hidden;
+      width: 60%;
+      padding: 60px;
+      margin: auto;
+      background: #63ccc8;
+  }
+  .feature_inner_head{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+ 
+}
+.common-btn{
+  border: none;
+  background: white;
+  padding: 10px 30px;
+  -webkit-box-shadow: 0px 0px 69px -48px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 0px 0px 69px -48px rgba(0, 0, 0, 0.67);
+  box-shadow: 0px 0px 69px -48px rgba(0, 0, 0, 0.67);
+}
+.head_underline{
+  text-align: center;
+  margin: auto;
+  border-bottom: 3px solid white;
+}
   }
 }
 .pricing_section{
@@ -97,7 +136,7 @@
 .get_in_touch_section{
   position: relative;
   .get_in_touch_block{
-    padding-top: 64px;
+
     padding-bottom: 64px;
   }
   .form_block{
@@ -109,7 +148,7 @@
   .form_head{
     color: #63ccc8;
     font-size: 22px;
-    font-family: Antipasto Pro DemiBold;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
   }
   .common-btn{
     float: right;
@@ -126,12 +165,13 @@
 
   border: 1px solid #63ccc8;
   color: #63CCC8;
-}& :focus {
-  color: #63ccc8;
-  background-color: #fff;
-  border-color: #63ccc8;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0);
+  & :focus {
+    color: #63ccc8;
+    background-color: #fff;
+    border-color: #63ccc8;
+    outline: 0;
+  }
+
 }
     }
     .details_block{
@@ -143,7 +183,7 @@
     background: #63CCC8;
     color: white;
     .content_head{
-      font-family: Antipasto Pro DemiBold;
+      font-family: 'M PLUS Rounded 1c', sans-serif;
       text-align: center;
       font-size: 22px;
 
@@ -168,9 +208,6 @@
     }
     .form-control{
       background: white;
-    }& :focus {
-   
-      box-shadow: 0 0 0 0.2rem rgba(0,123,255,0);
     }
     .input-group-text{
       border-radius: 0;
@@ -180,7 +217,7 @@
   }
   .footer_bg{
     background: #344e73;
-    padding: 10.5%;
+    padding: 10%;
     position: absolute;
     bottom: 0;
     right: 0;

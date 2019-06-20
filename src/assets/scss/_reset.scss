@@ -2,14 +2,18 @@
 body{
     font-family: 'Varela Round', sans-serif;
     color: #344E73;
+ 
 }
 // p{
 //     margin:  0 !important;
 // }
-.form-control{
-    border-radius: 0;
-
-}
 .navbar-expand-lg{
     padding: 24px 38px;
+} 
+.form-control{
+    border-radius: 0;
+  &:focus {
+ 
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0) !important;
+  }
 }
