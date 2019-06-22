@@ -1,6 +1,5 @@
-
 <section class="landing_section">
- <app-header></app-header>
+  <app-header></app-header>
   <div class="container main_one">
     <div class="main_section  ">
       <div class="row ">
@@ -100,53 +99,56 @@
       <div class="row">
         <div class="container">
           <div id="carouselContent" class="carousel slide text-white" data-ride="carousel">
-              <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active text-center p-4">
-                   
-                  <p class="feature_inner_head m-0 ">Easy to Integrate</p>
-                  <div class="head_underline mb-4"></div>
-                  <p class="feature_inner_caption">Easy API integration to receive signals from OneSpot.Check API Documents for more details</p>
-                  <button class="common-btn">Get started for free</button>
-                  
-             </div>
-             <div class="carousel-item  text-center p-4">
-                   
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active text-center p-4">
+
+                <p class="feature_inner_head m-0 ">Easy to Integrate</p>
+                <div class="head_underline mb-4"></div>
+                <p class="feature_inner_caption">Easy API integration to receive signals from OneSpot.Check API
+                  Documents for more details</p>
+                <button class="common-btn">Get started for free</button>
+
+              </div>
+              <div class="carousel-item  text-center p-4">
+
                 <p class="feature_inner_head m-0 ">Lower activation cost</p>
                 <div class="head_underline mb-4"></div>
-                <p class="feature_inner_caption">Activate your lost users at a lower cost. A great alternative to re targeting acquired in-active users.</p>
+                <p class="feature_inner_caption">Activate your lost users at a lower cost. A great alternative to re
+                  targeting acquired in-active users.</p>
                 <button class="common-btn">Get started for free</button>
-                
-           </div>
-           <div class="carousel-item  text-center p-4">
-                   
-              <p class="feature_inner_head m-0 ">Better Sales /Subscriptions</p>
-              <div class="head_underline mb-4"></div>
-              <p class="feature_inner_caption">With increased open rates through native communication channels you, you enjoy higher sales /subscriptions opportunity</p>
-              <button class="common-btn">Get started for free</button>
-              
-         </div>
+
               </div>
-              <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
-                <div class="indicators">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </div>
-              </a>
-              <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
-                <div class="indicators">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </div>
-                
-              </a>
+              <div class="carousel-item  text-center p-4">
+
+                <p class="feature_inner_head m-0 ">Better Sales /Subscriptions</p>
+                <div class="head_underline mb-4"></div>
+                <p class="feature_inner_caption">With increased open rates through native communication channels you,
+                  you enjoy higher sales /subscriptions opportunity</p>
+                <button class="common-btn">Get started for free</button>
+
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+              <div class="indicators">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </div>
+            </a>
+            <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+              <div class="indicators">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </div>
+
+            </a>
           </div>
-      </div>
+        </div>
       </div>
     </div>
-    
+
   </div>
 </section>
-<section class="pricing_section"  id="Pricing">
+<section class="pricing_section" id="Pricing">
   <div class="pricing_block container">
     <div class="pricing_heading">
       <div class="head_underline"></div>
@@ -217,38 +219,43 @@
             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
               <div class="row">
                 <div class="col-6">
-                    <div class="form-group">
-                        <input type="text"  formControlName="firstName" class="form-control" id="name" name="name" placeholder="Enter your name" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
-                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-                              <div *ngIf="f.firstName.errors.required">come on, you have a name, don't you?</div>
-                          </div>
+                  <div class="form-group">
+                    <input type="text" formControlName="name" class="form-control" id="name" name="name"
+                      placeholder="Enter your name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                      <div *ngIf="f.name.errors.required">come on, you have a name, don't you?</div>
                     </div>
+                  </div>
 
-                    <div class="form-group">
-                        <input type="text" formControlName="email" class="form-control" placeholder="Enter Email ID" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                            <div *ngIf="f.email.errors.required">Email is required</div>
-                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
-                        </div>
+                  <div class="form-group">
+                    <input type="text" formControlName="email" class="form-control" placeholder="Enter Email ID"
+                      [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                      <div *ngIf="f.email.errors.required">Email is required</div>
+                      <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
                     </div>
-                    <div class="form-group">
-                      <input type="text" formControlName="subject" class="form-control" id="subject" name="subject" placeholder="Enter Subject"[ngClass]="{ 'is-invalid': submitted && f.subject.errors }" />
-                      <div *ngIf="submitted && f.subject.errors" class="invalid-feedback">
-                        <div *ngIf="f.subject.errors.required">come on, you have a subject, don't you?</div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" formControlName="subject" class="form-control" id="subject" name="subject"
+                      placeholder="Enter Subject" [ngClass]="{ 'is-invalid': submitted && f.subject.errors }" />
+                    <div *ngIf="submitted && f.subject.errors" class="invalid-feedback">
+                      <div *ngIf="f.subject.errors.required">come on, you have a subject, don't you?</div>
                     </div>
                   </div>
                 </div>
                 <div class="col-6">
                   <div class="form-group">
-                      <textarea class="form-control" formControlName="message" name="message" id="message" rows="1" placeholder="Enter Message"[ngClass]="{ 'is-invalid': submitted && f.message.errors }" style="min-height: 145px;" ></textarea>
-                      <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
-                        <div *ngIf="f.message.errors.required">comeon type something</div>
-                        <div *ngIf="f.message.errors.minlength">comeon thats it </div>
+                    <textarea class="form-control" formControlName="message" name="message" id="message" rows="1"
+                      placeholder="Enter Message" [ngClass]="{ 'is-invalid': submitted && f.message.errors }"
+                      style="min-height: 145px;"></textarea>
+                    <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+                      <div *ngIf="f.message.errors.required">comeon type something</div>
+                      <div *ngIf="f.message.errors.minlength">comeon thats it </div>
                     </div>
                   </div>
-              </div>
+                </div>
                 <div class="col-12">
-                  <button  type="submit" value="submit" class="common-btn">SEND MESSAGE</button>
+                  <button type="submit" value="submit" class="common-btn">SEND MESSAGE</button>
                 </div>
               </div>
 
@@ -272,27 +279,27 @@
               </div>
             </div>
             <div class="Contact_details_one">
-                <div class="d-flex">
-                  <div class="mr-4 pt-2">
-                    <img src="../../assets/images/icons/phone.png" alt="">
-                  </div>
-                  <div class="">
-                    <p class="con_details_head m-0">+91 9642375817</p>
-                    <p class="con_details_caption m-0">Mon to Fri 10.00am to 6.00pm</p>
-                  </div>
+              <div class="d-flex">
+                <div class="mr-4 pt-2">
+                  <img src="../../assets/images/icons/phone.png" alt="">
+                </div>
+                <div class="">
+                  <p class="con_details_head m-0">+91 9642375817</p>
+                  <p class="con_details_caption m-0">Mon to Fri 10.00am to 6.00pm</p>
                 </div>
               </div>
-              <div class="Contact_details_one">
-                  <div class="d-flex">
-                    <div class="mr-4 pt-2">
-                      <img src="../../assets/images/icons/message.png" alt="">
-                    </div>
-                    <div class="">
-                      <p class="con_details_head m-0">support@OneSpot.com</p>
-                      <p class="con_details_caption m-0">Send us your query anytime!</p>
-                    </div>
-                  </div>
+            </div>
+            <div class="Contact_details_one">
+              <div class="d-flex">
+                <div class="mr-4 pt-2">
+                  <img src="../../assets/images/icons/message.png" alt="">
                 </div>
+                <div class="">
+                  <p class="con_details_head m-0">support@OneSpot.com</p>
+                  <p class="con_details_caption m-0">Send us your query anytime!</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -304,32 +311,34 @@
         <div class="col-4">
           <div class="head_underline"></div>
           <p class="footer_head">About Me</p>
-          <p  class="footer_content">Do you want to be even more successful? Learn to love learning and growth.</p>
-          <p  class="footer_content">Copyright © All rights reserved</p>
+          <p class="footer_content">Do you want to be even more successful? Learn to love learning and growth.</p>
+          <p class="footer_content">Copyright © All rights reserved</p>
         </div>
         <div class="col-4">
-            <p class="footer_head">Newsletter</p>
-            <p  class="footer_content">Stay updated with our latest trends</p>
-            <form >
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Your Email" id="mail" name="email">
-                <div class="input-group-append">
-                  <span class="input-group-text"><img src="./../../assets/images/icons/right-arrow@1X.png" alt=""></span>
-                </div>
+          <p class="footer_head">Newsletter</p>
+          <p class="footer_content">Stay updated with our latest trends</p>
+          <form>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Your Email" id="mail" name="email">
+              <div class="input-group-append">
+                <span class="input-group-text"><img src="./../../assets/images/icons/right-arrow@1X.png" alt=""></span>
               </div>
-            </form>
+            </div>
+          </form>
         </div>
         <div class="col-4">
-            <p class="footer_head">Follow Me</p>
-            <p  class="footer_content">Let us be social</p>
-            <div class="d-flex pt-3">
-                <img src="./../../assets/images/icons/dribbble.png" alt="" class="px-3"><img src="./../../assets/images/icons/facebook.png" alt="" class="px-3"><img src="./../../assets/images/icons/twitter.png" alt="" class="px-3">
-              </div>
+          <p class="footer_head">Follow Me</p>
+          <p class="footer_content">Let us be social</p>
+          <div class="d-flex pt-3">
+            <img src="./../../assets/images/icons/dribbble.png" alt="" class="px-3"><img
+              src="./../../assets/images/icons/facebook.png" alt="" class="px-3"><img
+              src="./../../assets/images/icons/twitter.png" alt="" class="px-3">
+          </div>
         </div>
       </div>
     </div>
   </div>
-<div class="footer_bg">
+  <div class="footer_bg">
 
-</div>
+  </div>
 </section>

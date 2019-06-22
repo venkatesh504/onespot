@@ -1,5 +1,6 @@
 const nodeMailer = require('../backend-services/Mailer');
 
 module.exports = (app) => {
-    app.get('/test', nodeMailer.sendMail);
+  console.log('Route called');
+  app.post('/send-mail', nodeMailer.sendMail);
 }
