@@ -1,0 +1,72 @@
+
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { }
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { }
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+
+    .main_head{
+        font-size: 28px;
+        line-height: 28px;
+    }
+    .main_caption {
+        line-height: 18px;
+        font-size: 12px;
+    }
+    .how_section .home_block {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    .main_signin {
+        font-size: 12px;
+    }
+    .section_caption {
+        width: 80%;
+   
+        font-size: 12px;
+    }
+  
+
+    .features_section .feature_slider .carousel-inner {
+padding: 0px;
+}
+.feature_inner_caption {
+font-size: 12px;
+}
+}
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+    .head_underline{
+        width: 70px;
+    } 
+ 
+        .main_head{
+            font-size: 32px;
+            line-height: 32px;
+        }
+        .main_signin{
+            font-size: 14px;
+        }
+        .section_head{
+            font-size: 21px;
+        }
+    .features_section {
+        .inner_block_content{
+            font-size: 12px;
+        }
+        .feature_slider .carousel-inner{
+            padding: 40px;
+        }
+    }
+    .get_in_touch_section {
+         .footer_block .footer_content {
+            font-size: 12px;
+            color: #ffffff78;}
+    }
+   
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its widt
