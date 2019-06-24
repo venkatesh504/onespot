@@ -7,6 +7,9 @@ body{
 // p{
 //     margin:  0 !important;
 // }
+a{
+  text-decoration: none !important;
+}
 .navbar-expand-lg{
     padding: 24px 10px;
 } 
@@ -16,4 +19,7 @@ body{
  
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,0) !important;
   }
+}
+.navbar-brand{
+  padding-bottom: 15px;
 }

@@ -13,7 +13,9 @@ import { Router } from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
   registerForm: FormGroup;
+  updateMail: FormGroup;
   submitted = false;
+  done = false;
   contactUs: any = [];
   constructor(private router: Router, private formBuilder: FormBuilder, private apiCalling: HttpClient, private toastr: ToastrService) { }
 
@@ -24,13 +26,23 @@ export class HomePageComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       subject: ['', Validators.required],
       message: ['', [Validators.required, Validators.minLength(10)]]
+      
     });
+    this.updateMail= this.formBuilder.group({
+      emailUpdate:['',[Validators.required,Validators.email]]
+    });
+    
   }
-  get f() { return this.registerForm.controls; }
+  get f() { return this.registerForm.controls;}
+  get f1() { return this.updateMail.controls;}
 
   onSubmit() {
     console.log("enter submit", this.registerForm.value);
     this.submitted = true;
+    // stop here if form is invalid
+    if (this.registerForm.invalid) {
+      return;
+    }
     return this.apiCalling.post('http://localhost:3000/send-mail', this.registerForm.value)
       .toPromise()
       .then((data) => {
@@ -44,12 +56,31 @@ export class HomePageComponent implements OnInit {
         }
         console.log('Data----------', data)
       });
-    // stop here if form is invalid
-    if (this.registerForm.invalid) {
+    
+
+   
+  }
+  
+  onUpdate(){
+    console.log("enter submit", this.updateMail.value); 
+     this.done = true;
+    if (this.updateMail.invalid) {
       return;
     }
-
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify("Thank you for Your valuable feedback"))
+    console.log("error");
+    return this.apiCalling.post('http://localhost:3000/updates', this.updateMail.value)
+    .toPromise()
+    .then((data) => {
+      if (data && data['response'] && data['accepted'] && data['accepted'].length > 0) {
+        console.log('success')
+        this.toastr.success('Thank you for contacting us', 'Sent!')
+        this.router.navigate(['/']);
+      } else {
+        console.log('Not sent')
+        this.toastr.error('Email not sent', 'Something went wrong')
+      }
+      console.log('Data----------', data)
+    });
   }
 
 }
