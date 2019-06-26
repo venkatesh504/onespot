@@ -12,8 +12,8 @@ NodeMailer.sendMail = function (_apiRequest, _apiResponse) {
   var smtpConfig = {
     service: 'Gmail',
     auth: {
-      user: 'venkatesh.y@way2online.co.in',
-      pass: 'v7207455147'
+      user: 'support@onespot.ai',
+      pass: 'Onespot@123'
     }
   };
   console.log("entered mailer")
@@ -23,7 +23,7 @@ NodeMailer.sendMail = function (_apiRequest, _apiResponse) {
   // setup e-mail data with unicode symbols
   var mailOptions = {
     from: "OneSpot Support", // sender address
-    to: "venkatesh.y@way2online.co.in,yamjal.venkatesh@gmail.com", // list of receivers
+    to: "venkatesh.y@way2online.co.in,vikrant.d@way2online.co.in", // list of receivers
     subject: subject, // Subject line
     text: message, // plaintext body
     html: '<!doctype html>\n<html lang="en">\n' +
@@ -54,8 +54,8 @@ NodeMailer.updateMail = function(_apiRequest,_apiResponse){
   var smtpConfig = {
     service: 'Gmail',
     auth: {
-      user: 'venkatesh.y@way2online.co.in',
-      pass: 'v7207455147'
+      user: 'support@onespot.ai',
+      pass: 'Onespot@123'
     }
   };
   console.log("entered  update mailer")
@@ -65,7 +65,7 @@ NodeMailer.updateMail = function(_apiRequest,_apiResponse){
   // setup e-mail data with unicode symbols
   var mailOptions = {
     from: "OneSpot Support", // sender address
-    to: "venkatesh.y@way2online.co.in,yamjal.venkatesh@gmail.com", // list of receivers
+    to: "venkatesh.y@way2online.co.in,vikrant.d@way2online.co.in",// list of receivers
     subject:"this is an mail update ", // Subject line
     text: emailUpdate, // plaintext body
     html: '<!doctype html>\n<html lang="en">\n' +
