@@ -23,3 +23,6 @@ a{
 .navbar-brand{
   padding-bottom: 15px;
 }
+.form-control.is-invalid, .was-validated .form-control:invalid{
+  border-color: #63ccc8 !important;
+}
