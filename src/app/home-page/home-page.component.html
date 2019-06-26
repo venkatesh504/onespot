@@ -322,10 +322,10 @@
         </div>
         <div class="col-12 col-md-4 ">
           <p class="footer_head">Newsletter</p>
-          <p class="footer_content">Stay updated with our latest trends</p>
+          <p class="footer_content">Stay updated </p>
           <form [formGroup]="updateMail" (ngSubmit)="onUpdate()">
             <div class="input-group mb-3">
-              <input type="email" class="form-control" formControlName="emailUpdate" placeholder="Enter Your Email" name="email" [ngClass]="{ 'is-invalid': done && f1.emailUpdate.errors }" />
+              <input type="email" class="form-control" formControlName="emailUpdate" placeholder=" Email-ID " name="email" [ngClass]="{ 'is-invalid': done && f1.emailUpdate.errors }" />
             <!-- <div class="placeholder"><p class="placeholder-class">enter email</p></div>                                                                                                                                                          -->
                 <span><button type="submit" value="submit" class=" input-group-text"><img src="./../../assets/images/icons/right-arrow@1X.png" alt=""></button></span>
                   <div *ngIf="done && f1.emailUpdate.errors" class="invalid-feedback">
